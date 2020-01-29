@@ -11,8 +11,6 @@ for name in os.listdir():
 
 ServerConnect ='\n#!/bin/bash\n#PBS -l nodes={nodes}:ppn={ppn}\n#PBS -l walltime={walltime}\n#PBS -l gres=ccm\n#PBS -o {outlog}\n#PBS -e {errlog}\n#PBS -N {name}\n'
 Module ='\nmodule load ccmrun\nmodule load hisat\nmodule load samtools\nmodule load stringtie\n\n' 
-
-#             
         
 class NGS_pipeline:
     def __init__(self):
